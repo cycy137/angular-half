@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <div *ngIf="selecdetail">
+    <h2>{{selecdetail.name | uppercase}} Details</h2>
+    <div><span>id: </span>{{selecdetail.id}}</div>
+     <div>
+    <label>name:
+      <input [(ngModel)]="selecdetail.name" placeholder="name">
+    </label>
+     </div>
+    <button (click)="goback()">go back</button>
+    <button (click)="save()">save</button>
+    <button class="delete" title="delete hero"
+  (click)="delete(hero)">x</button>
+  </div>
+</body>
+</html>
